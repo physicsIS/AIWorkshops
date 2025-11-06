@@ -4,50 +4,77 @@ This repository contains resources and materials for AI workshops covering funda
 
 ## Topics Covered
 
-- **Basic ML Algorithms**: Introduction to foundational machine learning algorithms including supervised and unsupervised learning techniques
-- **Diffusion Models**: Exploration of diffusion models for generative AI and image synthesis
-- **Transformer Models**: Deep dive into transformer architectures and their applications 
+- **01-Introduction_to_ML**: Foundational concepts in machine learning (PDF materials)
+- **02-Markov_Chains**: Markov chain implementation with text generation and visualization
+- **03-Autoencoders**: Basic autoencoders for MNIST, including latent space visualization and image denoising
+- **04-Variational-Autoencoders**: Variational autoencoders (VAE) with latent space interpolation and image generation
 
 ## Requirements
 
-The following Python libraries are recommended for working with the workshop materials:
+The following Python libraries are required for working with the workshop materials:
 
 ```bash
-pip install numpy pandas matplotlib scikit-learn
-pip install torch torchvision torchaudio
-pip install transformers diffusers
+pip install torch torchvision
+pip install numpy matplotlib
+pip install scikit-learn tqdm
 pip install jupyter notebook
-pip install seaborn plotly
-pip install accelerate
+pip install pillow
 ```
 
-### Recommended Libraries by Topic
+### Libraries by Topic
 
-**Basic ML:**
+**Markov Chains:**
 - `numpy` - Numerical computing
-- `pandas` - Data manipulation and analysis
-- `scikit-learn` - Classical ML algorithms
-- `matplotlib`, `seaborn` - Data visualization
+- `matplotlib` - Visualization
+- `random` - Random number generation
 
-**Diffusion Models:**
+**Autoencoders:**
 - `torch` - Deep learning framework
-- `diffusers` - Pre-trained diffusion models
-- `accelerate` - Distributed training utilities
+- `torchvision` - Computer vision datasets and utilities
+- `matplotlib` - Visualization
+- `numpy` - Numerical operations
+- `scikit-learn` - PCA and t-SNE for dimensionality reduction
+- `tqdm` - Progress bars
 
-**Transformer Models:**
-- `transformers` - Pre-trained transformer models
+**Variational Autoencoders:**
 - `torch` - Deep learning framework
-- `tokenizers` - Text tokenization utilities
+- `torchvision` - MNIST dataset and transforms
+- `matplotlib` - Visualization
+- `numpy` - Array operations
+- `PIL` (Pillow) - Image processing
+- `tqdm` - Progress bars
 
 ## Getting Started
 
 1. Clone this repository
 2. Install the required dependencies
 3. Navigate to the specific workshop folder
-4. Follow the instructions in each workshop's materials
+4. Open Jupyter notebooks or run Python scripts
 
-## Resources
+## Repository Structure
 
-Each workshop folder contains:
-- Presentation slides
-- Code examples and notebooks
+```
+.
+├── 01-Introduction_to_ML/          # ML fundamentals (PDF)
+├── 02-Markov_Chains/               # Markov chain text generation
+│   └── markov_chain.py
+├── 03-Autoencoders/                # Basic autoencoder implementation
+│   └── ae.ipynb
+└── 04-Variational-Autoencoders/    # VAE implementation and training
+    ├── vae_train_mnist.ipynb
+    └── vae_train_mnist_solution.ipynb
+```
+
+## Workshop Highlights
+
+**Autoencoders:**
+- Training autoencoders with different latent dimensions
+- Latent space visualization using t-SNE
+- Image denoising and reconstruction
+- MNIST digit encoding and decoding
+
+**Variational Autoencoders:**
+- VAE architecture with encoder-decoder structure
+- Training with reconstruction loss and KL divergence
+- Latent space interpolation between digits
+- Generating new samples from latent codes
